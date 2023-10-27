@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ conversation }) => {
     if (conversation.isGroup) return `${conversation.users.length} members`;
 
     return isActive ? "Active" : "Offline";
-  }, []);
+  }, [conversation, isActive]);
 
   return (
     <>
